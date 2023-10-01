@@ -14,10 +14,19 @@ body {
     color: #333;
 }
 
+a:link {
+        color: #137838;
+      }
+
+a:visited {
+        color: #137838;
+      }
+            
+
 h1, h2, h3, h4, h5 { font-family: IBM Plex Sans;
                      font-weight: bold;
                      border-bottom: 1px dotted black;
-                     color: #7a5ada; }
+                     color: #137838; }
 h1 {
         font-size: 140%;
 }

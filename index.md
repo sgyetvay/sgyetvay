@@ -3,8 +3,10 @@
 
 email: __sam.gyetvay@gmail.com__
 
-<img src="sampic_pixels.gif" alt="Sam"  loop=infinite>
+[CV](samgyetvay_cv.pdf)
+
+<img src="sam_jmp_pic1.jpg" alt="Sam" width="400" >
 
 ## Research
 
-coming soon ;-)
+
