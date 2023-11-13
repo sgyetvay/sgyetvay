@@ -1,33 +1,102 @@
+
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html>
+ 
+<script>
+function button(id) {
+  var x = document.getElementById(id);
+  var ids = ["abs1", "abs2", "abs3", "abs4", "sum1", "sum2"];
+  for(var i = 0; i < ids.length; i++) {
+    var item = ids[i];
+    if (item != id) {
+      document.getElementById(item).style.display = "none";
+    } else {
+      if (x.style.display === "none") {
+        x.style.display = "block"
+      } else {
+        x.style.display = "none";
+      }
+    }
+  }	
+}
+</script> 
+  
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Primary Meta Tags -->
   <title>Sam Gyetvay</title>
-  <style>
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-  </style>
-  <link rel="stylesheet" href="style.css" />
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
+  <meta name="title" content="Sam Gyetvay">
+  <meta name="description" content="PhD Candidate, Vancouver School of Economics, UBC. I'm a labor economist on the 2023-24 economics job market.">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://samgyetvay.com/">
+  <meta property="og:title" content="Sam Gyetvay">
+  <meta property="og:description" content="PhD Candidate, Vancouver School of Economics, UBC. I'm a labor economist on the 2023-24 economics job market.">
+  <meta property="og:image" content="sam_jmp_pic1.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://samgyetvay.com/">
+  <meta property="twitter:title" content="Sam Gyetvay">
+  <meta property="twitter:description" content="PhD Candidate, Vancouver School of Economics, UBC. I'm a labor economist on the 2023-24 economics job market.">
+  <meta property="twitter:image" content="sam_jmp_pic1.jpg">
 </head>
+
 <body>
-<header id="title-block-header">
-<h1 class="title">Sam Gyetvay</h1>
-</header>
-<h1 id="phd-candidate-vancouver-school-of-economics-ubc">PhD Candidate, Vancouver School of Economics, UBC</h1>
-<p>email: <strong>sam.gyetvay@gmail.com</strong></p>
-<p><a href="samgyetvay_cv.pdf">CV</a></p>
-<p><img src="sam_jmp_pic1.jpg" alt="Sam" width="400" ></p>
-<h2 id="research">Research</h2>
-<p><strong>Competition, Mobility and Immigration</strong> (Job Market Paper) <em>with Sekou Keita (IAB)</em>. Draft Coming Soon!</p>
+  <div class="wrapper">
+  <header>
+    <img src="sam_jmp_pic1.jpg" width="230">
+    <p></p>
+    <h1>Sam Gyetvay</h1>
+    <p><strong>PhD Candidate</strong>
+    <br><a href="https://economics.ubc.ca/profile/sam-gyetvay/" target="_blank" style="color:#000"><strong>Vancouver School of Economics</strong></a>
+    <br><strong>University of British Columbia</strong>
+    </p>
+    <p>
+      <a href="samgyetvay_cv.pdf" target="_blank">CV</a>
+      | <a href="mailto:sam.gyetvay@gmail.com" style="color:#222">sam.gyetvay@gmail.com</a>
+    </p>
+  </header>
+    
+  <section>  
+  
+  <p>I'm a labor economist on the 2023-24 economics job market.</p>
+
+  <h3>Research</h3>
+
+  <p style="margin-bottom:0"><strong>Competition, Mobility and Immigration</strong> (Job Market Paper)</p>
+  <p style="margin-bottom:0; color:#666"><em>with Sekou Keita (IAB)</em></p>
+  <div class="buttonbar">[ 
+    draft coming soon! 
+  ]</div>
+  <div class="popup" id="abs1">
+    <h4>Abstract</h4>
+    We study the effects of immigration on wages using matched employer-employee data from Germany throughout the opening of the German labor market to Central and Eastern Europe in 2011. We show that migrants and native-born workers are highly segregated across firms, even within narrowly defined markets, and that migrants are over-represented at low wage firms. Motivated by these facts, we derive the effects of a migrant labor supply shock on wages in a model of worker sorting across heterogeneous firms. Segregation moderates wage effects by reducing competition, and workers exposed to competition respond by reallocating across firms. To test these predictions, we extend the Card (2001) "ethnic enclave" instrument to isolate firm-specific migrant labor supply shocks. Consistent with the model, we find that firms cut wages and shed German workers, but that workers move to higher wage firms with lower migrant shares. Our suggest that inter-firm mobility is an important means by which the labor market adjusts to supply shocks, and can help explain the prevalence of null wage effects found in the literature.</div>
+  <br>
+
+  <!-- template code for additional papers
+       change the id's in the button onclick and popup div to match, i.e. 2nd paper is abs2, then abs3, etc.
+  -->
+  <!--
+  <p style="margin-bottom:0">Title</p>
+  <p style="margin-bottom:0; color:#666"><em>secondary title/tex</em></p>
+  <div class="buttonbar">[ 
+    <button class="button" onclick="button(&quot;abs2&quot;)">abstract</button> 
+    | <a href="OTHERPAPER.pdf" target="_blank">paper</a> 
+    | <a href="https://www.youtube.com/watch?v=IBGGsSG52gc" target="_blank">video</a> 
+  ]</div> 
+  <div class="popup" id="abs2" style="display:none">abstract here...</div>
+  <br>
+  -->
+     
+  </section>
+  </div>
+
 </body>
+  
 </html>
