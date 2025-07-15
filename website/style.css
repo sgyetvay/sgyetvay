@@ -1,0 +1,38 @@
+img {
+    max-width: 100%;
+    height: auto;
+  }  
+body {
+    font-family: 'Times New Roman', serif;
+    background-color: #f9f2e7; /* pale peach */
+    color: #000;
+  }
+  a {
+    color: #006400;       /* dark green */
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  #header-table {
+    width: 100%;         /* fill the wrapper’s width */
+    border-collapse: collapse;
+  }
+    #photo-cell img {
+    width: auto;            /* let its intrinsic width apply */
+    max-width: 150px;       /* caps it at 150px wide on large screens */
+    height: auto;
+    border: 2px solid #000; /* black border */
+  }
+  #school-logo {
+    width: 80px;
+    vertical-align: middle;
+  }
+  section {
+    margin: 2em 1em;
+  }
+  footer {
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: 3em;
+  }
