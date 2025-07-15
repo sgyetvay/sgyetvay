@@ -1,38 +1,58 @@
+/* style.css */
 img {
     max-width: 100%;
     height: auto;
-  }  
-body {
-    font-family: 'Times New Roman', serif;
-    background-color: #f9f2e7; /* pale peach */
-    color: #000;
   }
+  
+  body {
+    font-family: 'Times New Roman', serif;
+    background-color: #f9f2e7;
+    color: #000;
+    font-size: 1.8rem;
+    margin: 1em auto;
+    padding: 0;
+    max-width: 100%;            /* stretch to full width */
+    width: 90%;                 /* or: 90% of screen width */
+  }
+    
   a {
-    color: #006400;       /* dark green */
+    color: #006400;
     text-decoration: none;
   }
   a:hover {
     text-decoration: underline;
   }
+  
   #header-table {
-    width: 100%;         /* fill the wrapper’s width */
+    width: 100%;
     border-collapse: collapse;
   }
-    #photo-cell img {
-    width: auto;            /* let its intrinsic width apply */
-    max-width: 150px;       /* caps it at 150px wide on large screens */
+  
+  #photo-cell img {
+    width: auto;
+    max-width: 150px;
     height: auto;
-    border: 2px solid #000; /* black border */
+    border: 2px solid #000;
   }
+  
   #school-logo {
     width: 80px;
     vertical-align: middle;
   }
+  
   section {
-    margin: 2em 1em;
+    margin: 2em 0;
   }
-  footer {
-    text-align: center;
-    font-size: 0.9em;
-    margin-top: 3em;
+  
+  @media (max-width: 720px) {
+    body {
+      max-width: 95%;
+      margin: 1em auto 0 auto;
+    }
+  }
+  
+  .container {
+    max-width: 1000px;  /* or 900px, or whatever you prefer */
+    margin: 0 auto;     /* centers it horizontally */
+    padding: 0 1em;     /* prevents text from touching the edges */
   }
