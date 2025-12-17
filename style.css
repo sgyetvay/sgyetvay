@@ -72,13 +72,34 @@ img {
 
 /* Mobile adjustments */
 @media (max-width: 720px) {
+  body {
+    font-size: 1.4rem;       /* slightly smaller text for phones */
+  }
+
+  #header {
+    display: block;           /* stack header elements vertically */
+    overflow: hidden;
+    padding-bottom: 1em;      /* spacing below header */
+  }
+
   #photo-cell {
-    float: none;            /* cancel float */
-    margin: 0 auto 1em auto; /* center photo above text */
+    float: none;              /* cancel float */
+    margin: 0 auto 1em auto;  /* center photo above text */
+    text-align: center;
   }
 
   #photo-cell img {
-    width: 120px;
-    height: auto;
+    width: 120px;             /* smaller photo on phone */
+    height: auto;             /* preserve aspect ratio */
+    border: 2px solid #000;
+  }
+
+  #info-cell {
+    text-align: center;       /* center the text under the photo */
+    font-size: 0.9em;         /* slightly smaller than desktop text */
+  }
+
+  p, h1 {
+    margin: 0.3em 0;          /* tighter spacing for mobile */
   }
 }
