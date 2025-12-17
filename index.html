@@ -1,167 +1,88 @@
-
+<!-- index.html -->
 <!DOCTYPE html>
-<html>
- 
-<script>
-function button(id) {
-  var x = document.getElementById(id);
-  var ids = ["abs1", "abs2", "abs3", "abs4", "sum1", "sum2"];
-  for(var i = 0; i < ids.length; i++) {
-    var item = ids[i];
-    if (item != id) {
-      document.getElementById(item).style.display = "none";
-    } else {
-      if (x.style.display === "none") {
-        x.style.display = "block"
-      } else {
-        x.style.display = "none";
-      }
-    }
-  }	
-}
-</script> 
-  
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style_nov.css">
-  
-  <!-- Primary Meta Tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sam Gyetvay</title>
-  <meta name="title" content="Sam Gyetvay">
-  <meta name="description" content="Assistant Professor, Department of Economics, Université du Québec à Montréal">
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://samgyetvay.com/">
-  <meta property="og:title" content="Sam Gyetvay">
-  <meta property="og:description" content="Assistant Professor, Department of Economics, Université du Québec à Montréal">
-  <meta property="og:image" content="sam_jmp_pic1.jpg">
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://samgyetvay.com/">
-  <meta property="twitter:title" content="Sam Gyetvay">
-  <meta property="twitter:description" content="Assistant Professor, Department of Economics, Université du Québec à Montréal">
-  <meta property="twitter:image" content="sam_jmp_pic1.jpg">
+  <!-- Load external CSS; no inline overrides to ensure external rules apply -->
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <div class="wrapper">
-  <header>
-    <img src="sam_jmp_pic1.jpg" width="230">
-    <p></p>
-    <h1>Sam Gyetvay</h1>
-    <p>Assistant Professor
-    <br><a href="https://economics.ubc.ca/profile/sam-gyetvay/" target="_blank" style="color:#000; text-decoration: none;">Department of Economics</a>
-    <br>Université du Québec à Montréal
-    </p>
+  <div class="container">
+    <!-- Header / Bio -->
+    <table id="header-table">
+      <tr>
+        <td id="photo-cell" style="vertical-align: top; padding-right: 0.0125em;">
+          <img src="sam_photo.png" alt="Sam Gyetvay" id="profile-pic">
+        </td>
+        <td id="info-cell" style="vertical-align: top;">
+          <h1 style="margin: 0;">Sam Gyetvay</h1>
+          <p style="margin: 0;">Assistant Professor</p>
+          <p style="margin: 0;">Department of Economics</p>
+          <p style="margin: 0;">Université du Québec à Montréal<img src="uqam_logo.svg" alt="UQAM" id="school-logo"
+     style="display: inline-block; vertical-align: middle; margin-left: 0.3em;"></p> 
+          <p style="margin: 0;">Email: <a href="mailto:sam.gyetvay@gmail.com">sam.gyetvay@gmail.com</a></p>
+          <p style="margin: 0;"><a href="samgyetvay_cv.pdf" download>CV</a></p>
+          <!--<img src="uqam_logo.svg" alt="UQAM" id="school-logo" style="display: inline-block; margin-top: 0.5em;"> -->
+        </td>
+      </tr>
+    </table>
+
+
     <p>
-      <a href="samgyetvay_cv.pdf" target="_blank">CV</a>
-      | <a href="mailto:sam.gyetvay@gmail.com" style="color:#222; text-decoration: none;">sam.gyetvay@gmail.com</a>
+    I'm a labor economist. Most of my current research is about immigration. 
     </p>
-  </header>
+
+    <p>
+    Before joining UQAM, I was a Postdoctoral Scholar at the Ohio State University, where I worked with Kurt Lavetti. 
+    </p>
+
+    <p>
+    I received my PhD at the University of British Columbia in 2024, advised by Thomas Lemieux and Raffaele Saggio.
+    </p>
+
+
+    <section id="research">
+      <h2>Research</h2>
     
-  <section>  
+      <p>
+        <a href="papers/gyetvaykeita2023.pdf">Competition, Mobility, and Immigration</a> (w/ Sekou Keita) <br>
+      </p>
 
-    <p>I'm a labor economist.</p>
-    
-    <p>In 2024-25, I was a Postdoctoral Scholar at the Ohio State University, where I worked with Kurt Lavetti.</p>   
-    
-    <p>In 2024, I completed a by PhD in Economics at the University of British Columbia, advised by Thomas Lemieux and Raffaele Saggio.</p>
-      
+      <p>
+        The Effect of Mobility Restrictions on Refugees (w/ Philipp Jaschke, Kamal Kassam and Sekou Keita)       
+      </p>
 
-
-  </p>
-   
-  <p>
-
-  <h3>Research</h3>
-
-  <p style="margin-bottom:0"> Competition, Mobility and Immigration</p>
-  <!-- <p style="margin-bottom:0;"><em>with <a href="https://sites.google.com/site/sekoutkeita/home" target="_blank">Sekou Keita</a></em></p> -->
-  <p style="margin-bottom:0;"><em>with Sekou Keita</em></p> 
-  <div class = "buttonbar">[
-    <button class="button" onclick="button(&quot;abs1&quot;)">abstract</button>
-      | <a href="papers/gyetvaykeita2023.pdf" target = "_blank">paper</a>
-  ] </div>
-    <div class="popup" id="abs1">
-    We study the effects of immigration on wages using matched employer-employee data from Germany throughout 
-    the opening of the German labor market to Central and Eastern Europe in 2011. We show that migrants and 
-    native-born workers are highly segregated across firms, even within narrowly defined markets, and that 
-    migrants are over-represented at low wage firms. Motivated by these facts, we derive the effects of a migrant 
-    labor supply shock on wages in a model of worker sorting across heterogeneous firms. Segregation moderates wage 
-    effects by reducing competition, and workers exposed to competition respond by reallocating across firms. To test 
-    these predictions, we extend the Card (2001) "ethnic enclave" instrument to isolate firm-specific migrant labor 
-    supply shocks. Consistent with the model, we find that firms cut wages and shed German workers, but that workers 
-    move to higher wage firms with lower migrant shares. Our results suggest that inter-firm mobility is an important means 
-    by which the labor market adjusts to supply shocks, and can help explain the prevalence of null wage effects 
-    found in the literature.</div>
-  <br>
-
-  <h3>Work in Progress</h3>
-
-  <p style="margin-bottom:0">The effect of mobility restrictions on refugees</p>
-<p style="margin-bottom:0;"><em>with Sekou Keita, Philipp Jaschke and Kamal Kassam</em></p>
-  <br>
-
-  <p style="margin-bottom:0">The effect of job loss on health</p>
-<p style="margin-bottom:0;"><em>with Jonathan Holmes and Kurt Lavetti</em></p>
-  <br>
-
-
-  <h3>Publications</h3>
-
-<p style="margin-bottom:0">The distribution of COVID-19 related risks</p>
-<p style="margin-bottom:0;"><em>Canadian Journal of Economics, 2022</em></p>
-<div class = "buttonbar">[
-  <button class="button" onclick="button(&quot;abs2&quot;)">abstract</button>
-    | <a href="papers/samgyetvay_cje.pdf" target = "_blank">paper</a>
-] </div>
-<div class="popup" id="abs2" style="display:none">
-  We document two COVID-19–related risks, viral risk and employment risk, and their distributions across the 
-  Canadian population. The measurement of viral risk is based on the VSE COVID-19 Risk/Reward Assessment Tool, 
-  created to assist policy-makers in determining the impacts of pandemic-related economic shutdowns and re-openings. 
-  Women are more concentrated in high-viral-transmission-risk occupations, which is the source of their greater 
-  employment loss over the first part of the pandemic. They were also less likely to maintain contact with their 
-  former employers, reducing employment recovery rates. Low-educated workers face the same viral risk rates as 
-  high-educated workers but much higher employment losses. This is largely due to their lower likelihood of 
-  switching to working from home. For both women and the low-educated, existing inequities in their occupational 
-  distributions and living situations have resulted in them bearing  a disproportionate amount of the risk 
-  emerging from the pandemic. Assortative matching in couples has tended to exacerbate risk inequities. </div>
-  <br>
-
-  <h3>Policy Writing</h3>
-
-<p style="margin-bottom:0">The impact of basic income and other programs on wages and inequality</p>
-<p style="margin-bottom:0;"><em>with Nicole Fortin and Thomas Lemieux</em></p>
-<p style="margin-bottom:0;"><em>BC Basic Income Panel, 2020</em></p>
-<div class = "buttonbar">[
-  <!-- <button class="button" onclick="button(&quot;abs2&quot;)">abstract</button> -->
-    <a href="https://bcbasicincomepanel.ca/wp-content/uploads/2022/09/Impact_of_Basic_Income_and_other_Programs_on_Wages_and_Inequality.pdf" target = "_blank">paper</a>
-] </div>
-
-
-
-  <!-- template code for additional papers
-       change the id's in the button onclick and popup div to match, i.e. 2nd paper is abs2, then abs3, etc.
-  -->
-<!--   
-  <p style="margin-bottom:0">Title</p>
-  <p style="margin-bottom:0; color:#666"><em>secondary title/tex</em></p>
-  <div class="buttonbar">[ 
-    <button class="button" onclick="button(&quot;abs2&quot;)">abstract</button> 
-    | <a href="OTHERPAPER.pdf" target="_blank">paper</a> 
-    | <a href="https://www.youtube.com/watch?v=IBGGsSG52gc" target="_blank">video</a> 
-  ]</div> 
-  <div class="popup" id="abs2" style="display:none">abstract here...</div>
-  <br>
-  -->
+      <p>
+        The Effect of Job Loss on Health: Evidence from Utah (w/ Kurt Lavetti and Jonathan Holmes)       
+      </p>
      
-  </section>
-  </div>
+      <p>
+        Algorithmic v.s. Human Bias in Hiring (w/ Choenden Kyirong and Pascuel Plotkin)       
+      </p>
 
+      <p>
+        <a href="papers/covidrisk.pdf">The Distribution of COVID-19 Related Risks</a> (w/ Patrick Baylis, Pierre-Loup Beauregard, Marie Connolly, Nicole Fortin, David A. Green, Pablo Gutierrez Cubillos, Catherine Haeck, Timea Laura Molnar, Gaëlle Simard-Duplain, Henry E. Siu, Maria teNyenhuis, Casey Warman) <em>Canadian Journal of Economics</em>, 2022, 55(S1), 172-213. 
+        <a href="https://www.nber.org/papers/w27881">NBER WP</a> 
+      </p>
+    
+    
+    </section>
+    
+    <!-- Teaching -->
+    <section id="teaching">
+      <h2>Teaching</h2>
+      <p><a href="teaching/eco8000/">ECO8000 - Économie de travail</a></p>
+      <p><a href="teaching/eco8000/">ECO2273 - Économétrie I</a></p>
+    </section>
+
+    <!-- Footer (currently commented out) -->
+    <!--
+    <footer>
+      <p>&copy; 2025 Sam Gyetvay. All rights reserved.</p>
+    </footer>
+    -->
+  </div>
 </body>
-  
 </html>

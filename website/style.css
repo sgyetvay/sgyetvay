@@ -28,12 +28,11 @@ img {
     border-collapse: collapse;
   }
   
-  #photo-cell img {
-    width: auto;
-    max-width: 150px;
-    height: auto;
-    border: 2px solid #000;
-  }
+#photo-cell img {
+  height: 8.5em;
+  width: auto;
+  border: 2px solid #000;
+}
   
   #school-logo {
     width: 80px;
@@ -41,7 +40,7 @@ img {
   }
   
   section {
-    margin: 2em 0;
+    margin: 1.2em 0;
   }
   
   @media (max-width: 720px) {
@@ -56,3 +55,4 @@ img {
     margin: 0 auto;     /* centers it horizontally */
     padding: 0 1em;     /* prevents text from touching the edges */
   }
+
