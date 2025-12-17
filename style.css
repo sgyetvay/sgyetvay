@@ -27,14 +27,7 @@ img {
     width: 100%;
     border-collapse: collapse;
   }
-  
-#photo-cell img {
-  height: 8.5em;
-  width: auto;
-  border: 2px solid #000;
-  flex-shrink: 0;
-}
-  
+    
   #school-logo {
     width: 80px;
     vertical-align: middle;
@@ -57,19 +50,35 @@ img {
     padding: 0 1em;     /* prevents text from touching the edges */
   }
 
+/* Header flex layout */
 #header {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.5em;
+  display: block;
+  overflow: hidden;      /* clears floats so header has height */
+  padding-bottom: 0em; /* add spacing below header */
 }
 
+
+#photo-cell {
+  float: left;        /* photo sits left of text */
+  margin-right: 0.5em; /* spacing between photo and text */
+}
+
+/* Desktop profile picture */
+#photo-cell img {
+  height: 8.5em;
+  width: auto;
+  border: 2px solid #000;
+}
+
+/* Mobile adjustments */
 @media (max-width: 720px) {
-  #header {
-    align-items: center;
+  #photo-cell {
+    float: none;            /* cancel float */
+    margin: 0 auto 1em auto; /* center photo above text */
   }
 
   #photo-cell img {
-    height: auto;
     width: 120px;
+    height: auto;
   }
 }
